@@ -1,0 +1,57 @@
+﻿@model Gabriel_Padilla_P1.Models.PRodriguez
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PRodriguez</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CampoString)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CampoString)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CampoInt)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CampoInt)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CampoDecimal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CampoDecimal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CampoBool)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CampoBool)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CampoFecha)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CampoFecha)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Carrera)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Carrera.Id)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
